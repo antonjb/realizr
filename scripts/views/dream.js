@@ -10,7 +10,10 @@ var DreamsView = Backbone.View.extend({
     },
 
     render: function () {
-        dust.render( '', data, function (err, out) {
+        dust.render('', data, function (err, out) {
+            self.$el.append(data);
+
+            // Attach masonry plugin to the view
 
         });
     }

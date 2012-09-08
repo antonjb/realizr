@@ -1,38 +1,30 @@
-// Application view
-//
-// This view is the master for the entire application. It
-// sets up other child views and passes in models and
-// collections.
-// ------------------------------------------------------
 var AppView = Backbone.View.extend({
 
-    currentProjectId: 0,
-
-    initialize: function () {},
+    initialize: function () {
+        this.model.on('change', this.render, this);
+    },
 
     render: function () {
         var self = this;
-        dust.render( 'app', {}, function (err, out) {
-
+        dust.render('app', {}, function (err, out) {
+            self.$el.appendTo('body');
         });
-    },
-
-    showSettings: function () {
-        var fn = 'hide';
-        if (this.model.get('userIsChief')) fn = 'show';
-        $('#tabs-menu').find('li').last()[fn]();
     },
 
     createViews: function () {
         // Create and render all child views
         this.views = {
-            newProject: new NewProjectView({
-                el: $("#new-project")
+            dreamsTodo: new DreamsView({
+                el: $("#dreams-todo")
             }),
-            summary: new SummaryView({
+            dreamsCompleted: new DreamsView({
+                el: $("#dreams-completed")
+            }),
+            profile: new ProfileView({
                 el: $("#summary"),
-                model: this.model
+                model: this.model // user model
             })
         };
     }
+
 });

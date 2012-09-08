@@ -34,55 +34,43 @@
 
         <script type="text/javascript">
         jQuery(function ($) {
-            // Compile the templates
-
+            // Compile the templates - accessible via 'id' attribute of script at bottom of index.html
+            $('.dust-templates').each(function () {
+                var compiled = dust.compile($(this).html, $(this).attr('id'));
+                dust.loadSource(compiled);
+            });
 
             // Set up the router
             window.router = new Router();
 
             // Set up application
-            Backbone.emulateHTTP = true;
-            Backbone.emulateJSON = true;
             window.app = new AppView({
                 model: new ProjectModel(),
                 id: 'group-gift'
             });
             app.render();
-            Backbone.history.start({hashChange: true});
+            Backbone.history.start();
         });
         </script>
     </head>
     <body>
+
         <!-- Dust.js templates -->
-        <script id="list-item-template" class="dust-template" type="text/x-dust-template">
-        <div class="list-item">
-            <div class="left-section">
-                <div class="main-image"></div>
-                <div class="title">{title}</div>
-            </div>
-            <div class="right-section">
-                <div class="products">{}</div>
-                <div class="timer">{}</div>
-            </div>
-        </div>
+        <script id="app-template" class="dust-template" type="text/x-dust-template">
+        <div id="dreams-todos" class="list"></div>
+        <div id="dreams-completes" class="list"></div>
+        <div id="profile"></div>
         </script>
 
-        <script id="friends" class="dust-template" type="text/x-dust-template">
-        {#friends}
-        <div></div>{~n}
-        </script>
-
-        <script id="list-item-template" class="dust-template" type="text/x-dust-template">
-        <div class="list-item">
-            <div class="left-section">
-                <div class="main-image"></div>
-                <div class="title">{title}</div>
-            </div>
-            <div class="right-section">
-                <div class="products">{}</div>
-                <div class="timer">{}</div>
-            </div>
+        <script id="right-section" class="dust-template" type="text/x-dust-template">
+        <div class="friends">
+            {#friends}
+            <div class="friend"></div>{~n}
+            {/friends}
         </div>
+        <div class="products"></div>
+        <div class="timer"></div>
+        <div class="done"></div>
         </script>
 
         <script id="list-item-template" class="dust-template" type="text/x-dust-template">
@@ -92,10 +80,15 @@
                 <div class="title">{title}</div>
             </div>
             <div class="right-section">
-                <div class="products">{}</div>
+                <div class="products">
+                    {#products}
+                    <div class="friend"></div>{~n}
+                    {/products}
+                </div>
                 <div class="timer">{}</div>
             </div>
         </div>
         </script>
+
     </body>
 </html>
