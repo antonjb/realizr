@@ -1,0 +1,103 @@
+$padding: 10px
+$gutter: 5px
+$itemWidth: 230px
+$itemHeight: 350px
+$itemWidthActive: ($itemWidth * 2) + $padding
+$mainImgWidth: 210px
+$mainImgHeight: 290px
+// Colors
+$itemBase: #F1F1F1
+
+@mixin borderRadius($radius: 4px)
+  -web-kit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+@mixin transition($property, $duration: 0.3s)
+  -web-kit-transition: $property $duration
+  -moz-transition: $property $duration
+  transition: $property $duration
+
+@mixin boxShadow($xPos, $yPos, $offset, $blur, $color)
+  -web-kit-box-shadow: $xPos $yPos $offset $blur $color
+  -moz-box-shadow: $xPos $yPos $offset $blur $color
+  box-shadow: $xPos $yPos $offset $blur $color
+
+*
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  background: #FFF
+  font-family: Helvetica, sans-serif
+  font-size: 100%
+  line-height: 150%
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Maven Pro', sans-serif
+  font-weight: normal
+
+h1
+  font-size: 2em
+
+p
+  font-size: 0.8em
+
+.clearFix:before,
+.clearFix:after
+  content: ""
+  display: table
+
+div[role="main"]
+  margin: 0 auto
+  padding: $gutter
+  width: 80%
+
+.list-item
+  background: $itemBase
+  @include borderRadius()
+  @include boxShadow(0, 2px, 4px, 0, rgba(0, 0, 0, 0.3))
+  float: left
+  height: $itemHeight
+  margin-right: $padding
+  margin-bottom: $padding
+  overflow: hidden
+  padding: $padding
+  width: $itemWidth
+
+  -webkit-transition: all 0.3s
+  -moz-transition: all 0.3s
+  transition: all 0.3s
+
+  &:hover
+    cursor: pointer
+    @include boxShadow(0, 6px, 6px, 0, rgba(0, 0, 0, 0.2))
+
+  .right-section,
+  .left-section
+    float: left
+    width: $mainImgWidth
+
+  .right-section
+    overflow: scroll
+    height: 100%
+    width: 230px
+
+  &.active
+    width: $itemWidthActive
+    
+    .left-section
+      margin-right: $padding
+
+  .main-image
+    display: block
+    height: $mainImgHeight
+    overflow: hidden
+
+    img
+      display: block
+      margin: 0 auto
+
+  .title
+    line-height: 100%
