@@ -1,0 +1,29 @@
+[
+    {
+        "name":"skydiving",
+        "price":"500.10",
+        "location":"Perth WA",
+        "keywords":["skydive","skydiving","parachuting"],
+        "supplier":"Perth Skydiving Co.",
+        "availability":"all",
+        "pictures":["skydiving.jpg"]
+    },
+    {
+        "name":"travel to England",
+        "price":"5050.00",
+        "location":"Perth WA",
+        "keywords":["travel","England","London","Stonehenge","Castle","Royalty","Queen"],
+        "supplier":"Qantas",
+        "availability":"all",
+        "pictures":["London.jpg"]
+    },
+    {
+        "name":"flute lessons",
+        "price":"50.00",
+        "location":"Perth WA",
+        "keywords":["music","flute"],
+        "supplier":"Mrs Moonspasm",
+        "availability":"Tuesday afternoons by appointment only",
+        "pictures":["Flute.jpg"]
+    }
+]
