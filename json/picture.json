@@ -1,0 +1,25 @@
+{
+    "pictures":
+    [
+        {
+            "filename":"skydiving.jpg",
+            "keywords":["skydiving","skydive","parachute"]
+        },
+        {
+            "filename":"london.jpg",
+            "keywords":["london","england","royalty"]
+        },
+        {
+            "filename":"flute.jpg",
+            "keywords":["music","flute"]
+        },
+        {
+            "filename":"stonehenge.jpg",
+            "keywords":["england","stonehenge"]
+        },
+        {
+            "filename":"beard.jpg",
+            "keywords":["beard"]
+        }
+    ]
+}
