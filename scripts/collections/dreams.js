@@ -1,5 +1,7 @@
-var ListItem = Backbone.Collection.extend({
+var DreamsCollection = Backbone.Collection.extend({
 
-    url: 'json/dreams.json'
+    localStorage: new Store("dreams"),
+
+    model: DreamModel
 
 });
