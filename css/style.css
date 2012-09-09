@@ -3,6 +3,21 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+::-webkit-scrollbar {
+  width: 12px; }
+
+::-webkit-scrollbar-track {
+  width: 12px; }
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 10px;
+  width: 10px; }
+
+::-webkit-scrollbar-button {
+  display: none;
+  background: transparent; }
+
 body {
   background: white;
   font-family: Helvetica, sans-serif;
@@ -29,7 +44,7 @@ div[role="main"] {
   padding: 5px;
   width: 80%; }
 
-.list-item {
+.list-item, .add-item {
   background: #f1f1f1;
   -web-kit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -38,7 +53,7 @@ div[role="main"] {
   -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
   float: left;
-  height: 350px;
+  height: 270px;
   margin-right: 10px;
   margin-bottom: 10px;
   overflow: hidden;
@@ -47,29 +62,35 @@ div[role="main"] {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s; }
-  .list-item:hover {
+  .list-item .right-section, .add-item .right-section,
+  .list-item .left-section,
+  .add-item .left-section {
+    float: left;
+    width: 210px; }
+  .list-item .right-section, .add-item .right-section {
+    overflow: scroll;
+    height: 100%;
+    width: 230px; }
+    .list-item .right-section::-webkit-scrollbar-thumb, .add-item .right-section::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      width: 10px; }
+  .list-item:hover, .add-item:hover {
     cursor: pointer;
     -web-kit-box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2); }
-  .list-item .right-section,
-  .list-item .left-section {
-    float: left;
-    width: 210px; }
-  .list-item .right-section {
-    overflow: scroll;
-    height: 100%;
-    width: 230px; }
-  .list-item.active {
+    .list-item:hover .right-section, .add-item:hover .right-section {
+      overflow-y: scroll; }
+  .list-item.active, .active.add-item {
     width: 470px; }
-    .list-item.active .left-section {
+    .list-item.active .left-section, .active.add-item .left-section {
       margin-right: 10px; }
-  .list-item .main-image {
+  .list-item .main-image, .add-item .main-image {
     display: block;
-    height: 290px;
+    height: 210px;
     overflow: hidden; }
-    .list-item .main-image img {
+    .list-item .main-image img, .add-item .main-image img {
       display: block;
       margin: 0 auto; }
-  .list-item .title {
+  .list-item .title, .add-item .title {
     line-height: 100%; }

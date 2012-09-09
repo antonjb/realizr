@@ -1,10 +1,10 @@
 $padding: 10px
 $gutter: 5px
 $itemWidth: 230px
-$itemHeight: 350px
+$itemHeight: 270px
 $itemWidthActive: ($itemWidth * 2) + $padding
 $mainImgWidth: 210px
-$mainImgHeight: 290px
+$mainImgHeight: 210px
 // Colors
 $itemBase: #F1F1F1
 
@@ -27,6 +27,21 @@ $itemBase: #F1F1F1
   -moz-box-sizing: border-box
   -webkit-box-sizing: border-box
   box-sizing: border-box
+
+::-webkit-scrollbar
+  width: 12px
+
+::-webkit-scrollbar-track
+  width: 12px
+
+::-webkit-scrollbar-thumb
+  background: #CCC
+  border-radius: 10px
+  width: 10px
+
+::-webkit-scrollbar-button
+  display: none
+  background: transparent
 
 body
   background: #FFF
@@ -70,10 +85,6 @@ div[role="main"]
   -moz-transition: all 0.3s
   transition: all 0.3s
 
-  &:hover
-    cursor: pointer
-    @include boxShadow(0, 6px, 6px, 0, rgba(0, 0, 0, 0.2))
-
   .right-section,
   .left-section
     float: left
@@ -84,9 +95,20 @@ div[role="main"]
     height: 100%
     width: 230px
 
+    &::-webkit-scrollbar-thumb
+      border-radius: 10px
+      width: 10px
+
+  &:hover
+    cursor: pointer
+    @include boxShadow(0, 6px, 6px, 0, rgba(0, 0, 0, 0.2))
+
+    .right-section
+      overflow-y: scroll
+
   &.active
     width: $itemWidthActive
-    
+
     .left-section
       margin-right: $padding
 
@@ -101,3 +123,6 @@ div[role="main"]
 
   .title
     line-height: 100%
+
+.add-item
+  @extend .list-item
