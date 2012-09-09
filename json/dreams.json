@@ -12,7 +12,7 @@
     },
     {
         "id":2,
-        "objective":"learn to play the flute",
+        "objective":"diving",
         "due":1363708800000,
         "privacy":"public",
         "users":"jo bloggs",
@@ -45,7 +45,7 @@
     },
     {
         "id":5,
-        "objective":"Start my own business",
+        "objective":"swim with whales",
         "due":1365091200000,
         "privacy":"private",
         "users":"jo bloggs",
