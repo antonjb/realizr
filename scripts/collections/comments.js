@@ -1,6 +1,6 @@
 var CommentsCollection = Backbone.Collection.extend({
 
-    localStorage: new Store("dreams"),
+    localStorage: new Store("comments"),
 
     model: CommentModel
 

@@ -1,7 +1,6 @@
 [
     {
         "id":1,
-        "user":"jo bloggs",
         "author":"jo bloggs",
         "text":"yeah I know everyone wants to do this, but so do I",
         "date":1347379200000,
@@ -9,7 +8,6 @@
     },
     {
         "id":2,
-        "user":"jo bloggs",
         "author":"harry potter",
         "text":"not me. Leaping out of a perfectly good airplane seems a little stupid",
         "date":1347379200000,
@@ -17,7 +15,6 @@
     },
     {
         "id":3,
-        "user":"jo bloggs",
         "author":"jo bloggs",
         "text":"the fiddle is the traditional aspiration, but I like the sound of a flute",
         "date":1347379200000,
@@ -25,7 +22,6 @@
     },
     {
         "id":4,
-        "user":"jo bloggs",
         "author":"harry potter",
         "text":"easier to learn and harder to master, I think",
         "date":1347379200000,
@@ -33,7 +29,6 @@
     },
     {
         "id":5,
-        "user":"jo bloggs",
         "author":"jo bloggs",
         "text":"what you know about the flute is remarkable in its paucity and irrelevance",
         "date":1347379200000,
@@ -41,9 +36,8 @@
     },
     {
         "id":6,
-        "user":"jo bloggs",
         "author":"jane doe",
-        "text":"went there last year. Not as awesome as you'd imagine",
+        "text":"went there last year. Not as awesome as youd imagine",
         "date":1347379200000,
         "dream":4
     }

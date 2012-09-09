@@ -13,19 +13,14 @@ var DreamsView = Backbone.View.extend({
     save: function (ev) {
         // Grab the id of the dream from the event attribute
         var dId = $(ev.target).attr('data-dream-id'),
-            dream = this.collection
-
+            dream = this.collection;
     },
 
     render: function () {
-        var self = this,
-            data = _.extend(this.collection.toJSON(), products.getByKeywords(''));
+        var self = this;
 
-        dust.render('', this.collection.toJSON(), function (err, out) {
-            self.$el.append(data);
-
-            // Attach masonry plugin to the view
-            s
+        dust.render('list-template', this.collection.toJSON(), function (err, out) {
+            self.$el.append(out);
         });
     }
 
