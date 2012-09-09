@@ -50,6 +50,10 @@ div[role="main"] {
 .li-triple {
   width: 710px; }
 
+.ui-sortable-placeholder {
+  background: #eeeeee;
+  border: 1px solid red; }
+
 .list-item, .add-item {
   background: #f1f1f1;
   -web-kit-border-radius: 4px;

@@ -14,4 +14,8 @@ $(function(){
 
   });
 
+	$(".dream").sortable({
+		connectWith: ".dream"
+	});
+
 });
