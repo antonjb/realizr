@@ -1,7 +1,7 @@
 $(function(){
   
   var activeClass = "active",
-      $items = $(".list-item");
+      $items = $(".dream-item");
 
   $items.on("click", function(){
     var $this = $(this);

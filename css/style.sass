@@ -69,6 +69,12 @@ div[role="main"]
   padding: $gutter
   width: 80%
 
+.li-double
+  width: $itemWidthActive
+
+.li-triple
+  width: ($itemWidth * 3) + ($padding * 2)
+
 .list-item
   background: $itemBase
   @include borderRadius()
@@ -107,7 +113,7 @@ div[role="main"]
       overflow-y: scroll
 
   &.active
-    width: $itemWidthActive
+    @extend .li-double
 
     .left-section
       margin-right: $padding
@@ -126,3 +132,6 @@ div[role="main"]
 
 .add-item
   @extend .list-item
+
+  .title
+    text-align: center
