@@ -2,7 +2,7 @@
     {
         "id":1,
         "objective":"skydive",
-        "due date":"1 Jan 2015",
+        "due":1355241600000,
         "privacy":"public",
         "users":"jo bloggs",
         "comments":[1,2],
@@ -13,7 +13,7 @@
     {
         "id":2,
         "objective":"learn to play the flute",
-        "due date":"1 Jan 2016",
+        "due":1363708800000,
         "privacy":"public",
         "users":"jo bloggs",
         "comments":[3,4,5],
@@ -24,7 +24,7 @@
     {
         "id":3,
         "objective":"grow a beard",
-        "due date":"1 July 2014",
+        "due":1377964800000,
         "privacy":"private",
         "users":"jo bloggs",
         "comments":[],
@@ -35,7 +35,7 @@
     {
         "id":4,
         "objective":"visit stonehenge",
-        "due date":"1 July 2015",
+        "due":1364745600000,
         "privacy":"public",
         "users":"jo bloggs",
         "comments":[6],
@@ -46,7 +46,7 @@
     {
         "id":5,
         "objective":"Start my own business",
-        "due date":"1 July 2012",
+        "due":1365091200000,
         "privacy":"private",
         "users":"jo bloggs",
         "comments":[],

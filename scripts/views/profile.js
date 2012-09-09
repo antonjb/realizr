@@ -10,7 +10,7 @@ var ProfileView = Backbone.View.extend({
     },
 
     render: function () {
-        dust.render( '', data, function (err, out) {
+        dust.render( 'profile-template', data, function (err, out) {
 
         });
     }

@@ -49,6 +49,7 @@
             window.users = new UsersCollection();
             window.products = new ProductsCollection();
             window.dreams = new DreamsCollection();
+            window.comments = new CommmentsCollection();
 
             users.fetch();
             products.fetch();
@@ -70,37 +71,43 @@
 
         <!-- Dust.js templates -->
         <script id="app-template" class="dust-template" type="text/x-dust-template">
-        <div id="dreams-todos" class="list"></div>
-        <div id="dreams-completes" class="list"></div>
-        <div id="profile"></div>
+            <div id="dreams-todos" class="list"></div>
+            <div id="dreams-completes" class="list"></div>
+            <div id="profile"></div>
         </script>
 
-        <script id="right-section" class="dust-template" type="text/x-dust-template">
-        <div class="friends">
-            {#friends}
-            <div class="friend"></div>{~n}
-            {/friends}
-        </div>
-        <div class="products"></div>
-        <div class="timer"></div>
-        <div class="done"></div>
-        </script>
-
-        <script id="list-item-template" class="dust-template" type="text/x-dust-template">
-        <div class="list-item">
-            <div class="left-section">
-                <div class="main-image"></div>
-                <div class="title">{title}</div>
+        <script id="right-section-template" class="dust-template" type="text/x-dust-template">
+            <div class="friends">
+                {#friends}
+                <div class="friend"></div>{~n}
+                {/friends}
             </div>
-            <div class="right-section">
-                <div class="products">
-                    {#products}
-                    <div class="friend"></div>{~n}
-                    {/products}
+            <div class="products"></div>
+            <div class="timer"></div>
+            <div class="done"></div>
+        </script>
+
+        <script id="dreams-template" class="dust-template" type="text/x-dust-template">
+            <div class="list-item">
+                <div class="left-section">
+                    <div class="main-image"></div>
+                    <div class="title">{title}</div>
                 </div>
-                <div class="timer">{}</div>
+                <div class="right-section">
+                    <div class="products">
+                        {#products}
+                        <div class="friend"></div>{~n}
+                        {/products}
+                    </div>
+                    <div class="timer">{}</div>
+                </div>
             </div>
-        </div>
+        </script>
+
+        <script id="profile-template" class="dust-template" type="text/x-dust-template">
+            <div id="dreams-todos" class="list"></div>
+            <div id="dreams-completes" class="list"></div>
+            <div id="profile"></div>
         </script>
 
     </body>

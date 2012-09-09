@@ -17,7 +17,6 @@ var ProductsCollection = Backbone.Collection.extend({
                     return word.toLowerCase() === kw.toLowerCase();
                 });
 
-
                 if (haveKeyword) {
                     products.push(prod);
                 }

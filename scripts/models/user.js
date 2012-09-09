@@ -5,15 +5,22 @@ var UserModel = Backbone.Model.extend({
         var self = this,
             dreamIds = this.get('dreams');
 
-        this.dreams = new Backbone.Collection();
+        this.dreams = this.getChildren(this.get('dreams'), dreams);
+    },
 
-        if (typeof dreamIds !== 'undefined') {
-            _.each(dreamIds, function (i) {
-                self.dreams.push(window.dreams.find(function (dream) {
+    getChildren: function (ids, collection) {
+        var self = this;
+        newCollection = new Backbone.Collection();
+
+        if (typeof ids !== 'undefined') {
+            _.each(ids, function (i) {
+                newCollection.push(window.dreams.find(function (dream) {
                     return dream.id === i;
                 }));
             });
         }
+
+        return newCollection;
     }
 
 });

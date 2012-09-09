@@ -4,7 +4,7 @@
         "user":"jo bloggs",
         "author":"jo bloggs",
         "text":"yeah I know everyone wants to do this, but so do I",
-        "date":"8 Sep 12",
+        "date":1347379200000,
         "dream":1
     },
     {
@@ -12,7 +12,7 @@
         "user":"jo bloggs",
         "author":"harry potter",
         "text":"not me. Leaping out of a perfectly good airplane seems a little stupid",
-        "date":"8 Sep 12",
+        "date":1347379200000,
         "dream":2
     },
     {
@@ -20,7 +20,7 @@
         "user":"jo bloggs",
         "author":"jo bloggs",
         "text":"the fiddle is the traditional aspiration, but I like the sound of a flute",
-        "date":"8 Sep 12",
+        "date":1347379200000,
         "dream":2
     },
     {
@@ -28,7 +28,7 @@
         "user":"jo bloggs",
         "author":"harry potter",
         "text":"easier to learn and harder to master, I think",
-        "date":"8 Sep 12",
+        "date":1347379200000,
         "dream":2
     },
     {
@@ -36,7 +36,7 @@
         "user":"jo bloggs",
         "author":"jo bloggs",
         "text":"what you know about the flute is remarkable in its paucity and irrelevance",
-        "date":"8 Sep 12",
+        "date":1347379200000,
         "dream":2
     },
     {
@@ -44,7 +44,7 @@
         "user":"jo bloggs",
         "author":"jane doe",
         "text":"went there last year. Not as awesome as you'd imagine",
-        "date":"8 Sep 12",
+        "date":1347379200000,
         "dream":4
     }
 ]
