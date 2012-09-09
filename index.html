@@ -87,19 +87,17 @@
             <div class="done"></div>
         </script>
 
-        <script id="dreams-template" class="dust-template" type="text/x-dust-template">
-            <div class="list-item">
-                <div class="left-section">
-                    <div class="main-image"></div>
-                    <div class="title">{title}</div>
-                </div>
-                <div class="right-section">
-                    <div class="products">
-                        {#products}
-                        <div class="friend"></div>{~n}
-                        {/products}
-                    </div>
-                    <div class="timer">{}</div>
+        <script id="list-item-template" class="dust-template" type="text/x-dust-template">
+        <div class="list-item">
+            <div class="left-section">
+                <div class="main-image"></div>
+                <h1 class="title">{title}</h1>
+            </div>
+            <div class="right-section">
+                <div class="products">
+                    {#products}
+                    <div class="friend"></div>{~n}
+                    {/products}
                 </div>
             </div>
         </script>
@@ -108,6 +106,11 @@
             <div id="dreams-todos" class="list"></div>
             <div id="dreams-completes" class="list"></div>
             <div id="profile"></div>
+        </script>
+
+        <script id="add-item-template" class="dust-template" type="text/x-dust-template">
+        <div class="add-item">
+        </div>
         </script>
 
     </body>
