@@ -1,6 +1,6 @@
 var AppView = Backbone.View.extend({
 
-    initialize: function () {
+    initialize: function (options) {
         this.model.on('change', this.render, this);
     },
 
@@ -14,11 +14,9 @@ var AppView = Backbone.View.extend({
     createViews: function () {
         // Create and render all child views
         this.views = {
-            dreamsTodo: new DreamsView({
-                el: $("#dreams-todo")
-            }),
-            dreamsCompleted: new DreamsView({
-                el: $("#dreams-completed")
+            dreams: new DreamsView({
+                el: $("#dreams-todo"),
+                collection: this.model.collections.dreams
             }),
             profile: new ProfileView({
                 el: $("#summary"),

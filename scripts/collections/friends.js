@@ -1,5 +1,5 @@
-var Dream = Backbone.Collection.extend({
+var FriendModel = Backbone.Collection.extend({
 
-    url: 'json/user.json'
+    url: 'json/users.json'
 
 });

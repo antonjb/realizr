@@ -2,16 +2,16 @@
     {
         "name":"jo bloggs",
         "email":"jo.bloggs@test.com",
-        "dreams":["1","2","3","4","5"]
+        "dreams": [1,3,4]
     },
     {
         "name":"harry potter",
         "email":"harry.potter@test.com",
-        "dreams":[]
+        "dreams": [2,5]
     },
     {
         "name":"jane doe",
         "email":"jane.doe@test.com",
-        "dreams":[]
+        "dreams": []
     }
 ]
