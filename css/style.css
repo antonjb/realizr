@@ -18,10 +18,18 @@
   display: none;
   background: transparent; }
 
+html,
 body {
-  background: white;
+  height: 100%; }
+
+body {
+  background: #a7e1e6;
+  background: -webkit-linear-gradient(top, #a7e1e6, white 100%);
+  background-repeat: repeat-x;
+  color: white;
   font-family: Helvetica, sans-serif;
   font-size: 100%;
+  height: 100%;
   line-height: 150%; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,6 +39,18 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2em; }
 
+header {
+  background: #202020;
+  margin-bottom: 10px;
+  padding: 20px; }
+  header h1 {
+    background: url("../img/realizrlogo.png") no-repeat;
+    height: 51px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    width: 462px; }
+
 p {
   font-size: 0.8em; }
 
@@ -39,7 +59,8 @@ p {
   content: "";
   display: table; }
 
-div[role="main"] {
+div[role="main"],
+header > div {
   margin: 0 auto;
   padding: 5px;
   width: 80%; }
@@ -55,7 +76,7 @@ div[role="main"] {
   border: 1px solid red; }
 
 .list-item, .add-item {
-  background: #f1f1f1;
+  background: #202020;
   -web-kit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -76,11 +97,32 @@ div[role="main"] {
   .list-item .left-section,
   .add-item .left-section {
     float: left;
+    height: 260px;
     width: 210px; }
   .list-item .right-section, .add-item .right-section {
     overflow: scroll;
     height: 100%;
     width: 230px; }
+    .list-item .right-section h2, .add-item .right-section h2 {
+      font-size: 1.4em;
+      line-height: 100%;
+      margin: 0; }
+    .list-item .right-section p, .add-item .right-section p {
+      margin-top: 0; }
+    .list-item .right-section .options, .add-item .right-section .options {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .list-item .right-section .options .complete, .add-item .right-section .options .complete {
+        background: #d6dc36;
+        color: #202020;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 4px;
+        border-radius: 4px; }
+        .list-item .right-section .options .complete:hover, .add-item .right-section .options .complete:hover {
+          background: #dfe461; }
     .list-item .right-section::-webkit-scrollbar-thumb, .add-item .right-section::-webkit-scrollbar-thumb {
       border-radius: 10px;
       width: 10px; }
@@ -101,6 +143,8 @@ div[role="main"] {
       display: block;
       margin: 0 auto; }
   .list-item .title, .add-item .title {
+    color: white;
+    font-size: 1.2em;
     line-height: 100%; }
 
 .add-item .title {

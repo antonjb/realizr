@@ -1,8 +1,20 @@
 var DreamsView = Backbone.View.extend({
 
+    dreamClass: 'dream-item',
+    activeClass: 'active',
+
     // Delegate events hash
     events: {
-        'button.save': 'save'
+        'button.save': 'save',
+        'click .dream-item': 'toggleView'
+    },
+
+    toggleView: function(ev){
+        var $ct = $(ev.currentTarget),
+            selected = $ct.hasClass(this.activeClass);
+
+        $('.' + this.activeClass, this.$el).removeClass(this.activeClass);
+        if (!selected) $ct.addClass(this.activeClass);
     },
 
     initialize: function () {
@@ -17,10 +29,18 @@ var DreamsView = Backbone.View.extend({
     },
 
     render: function () {
-        var self = this;
+        var self = this,
+            data = {
+                dreams: this.collection.toJSON()
+            };
 
-        dust.render('list-template', this.collection.toJSON(), function (err, out) {
+        dust.render('list-item-template', data, function (err, out) {
             self.$el.append(out);
+            self.$el.find('.time').each(function(index, el){
+                var $this = $(el),
+                    when = moment(new Date(Number($this.text())));
+                $this.text(when.format("MMM, YYYY"));
+            });
         });
     }
 

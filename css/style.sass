@@ -6,7 +6,9 @@ $itemWidthActive: ($itemWidth * 2) + $padding
 $mainImgWidth: 210px
 $mainImgHeight: 210px
 // Colors
-$itemBase: #F1F1F1
+$itemBase: #202020
+$baseFirst: #a7e1e6
+$baseSecond: #fff
 
 @mixin borderRadius($radius: 4px)
   -web-kit-border-radius: $radius
@@ -43,10 +45,18 @@ $itemBase: #F1F1F1
   display: none
   background: transparent
 
+html,
 body
-  background: #FFF
+  height: 100%
+
+body
+  background: $baseFirst
+  background: -webkit-linear-gradient(top, $baseFirst, $baseSecond 100%)
+  background-repeat: repeat-x
+  color: #fff
   font-family: Helvetica, sans-serif
   font-size: 100%
+  height: 100%
   line-height: 150%
 
 h1, h2, h3, h4, h5, h6
@@ -56,6 +66,19 @@ h1, h2, h3, h4, h5, h6
 h1
   font-size: 2em
 
+header
+  background: #202020
+  margin-bottom: $padding
+  padding: 20px
+
+  h1
+    background: url("../img/realizrlogo.png") no-repeat
+    height: 51px
+    overflow: hidden
+    text-indent: 100%
+    white-space: nowrap
+    width: 462px
+
 p
   font-size: 0.8em
 
@@ -64,7 +87,8 @@ p
   content: ""
   display: table
 
-div[role="main"]
+div[role="main"],
+header > div
   margin: 0 auto
   padding: $gutter
   width: 80%
@@ -98,12 +122,38 @@ div[role="main"]
   .right-section,
   .left-section
     float: left
+    height: 260px
     width: $mainImgWidth
 
   .right-section
     overflow: scroll
     height: 100%
     width: 230px
+
+    h2
+      font-size: 1.4em
+      line-height: 100%
+      margin: 0
+
+    p
+      margin-top: 0
+
+    .options
+      list-style: none
+      margin: 0
+      padding: 0
+
+      .complete
+        background: #d6dc36
+        color: #202020
+        font-weight: bold
+        margin-bottom: $padding
+        text-align: center
+        padding: 4px
+        border-radius: 4px
+
+        &:hover
+          background: lighten(#d6dc36, 10%)
 
     &::-webkit-scrollbar-thumb
       border-radius: 10px
@@ -132,6 +182,8 @@ div[role="main"]
       margin: 0 auto
 
   .title
+    color: #FFF
+    font-size: 1.2em
     line-height: 100%
 
 .add-item
